@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import PaginaInicial from "./pages/paginaInicial.jsx"
+import PaginaLogin from "./pages/paginaLogin.jsx"
+import PaginaMostrarEntidad from "./pages/paginaMostrarEntidad.jsx"
+import PaginaMapa from "./mapas/Principal.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PaginaInicial/>}/>
+          <Route path="/login" element={<PaginaLogin/>}/>
+          <Route path="/entidades" element={<PaginaMostrarEntidad/>}/>
+          <Route path="/principal" element={<PaginaMapa/>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
