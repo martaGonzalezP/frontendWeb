@@ -71,12 +71,20 @@ const CompFotos = () => {
     return(
         <div className='container-fluid'>
             <img src={entidad.foto} alt="" style={{width:'20%'}} className="card-img-top img-fluid" />
-            <form id="formularioParte2" onSubmit={subirFotoIdentificativa}>
+            {(localStorage.getItem('objetoToken')!=undefined) ? 
+            (<form id="formularioParte2" onSubmit={subirFotoIdentificativa}>
                 <div style={{flexdirection: 'row', width:'90%'}} >
                     <input type="file" className="form-control" id="archivo" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".png , .jpg"/>
                     <button className="btn btn-secondary mt-2" type="submit" >Cambiar foto</button>
                 </div>
-            </form>
+            </form>) :
+            (<form id="formularioParte2" onSubmit={subirFotoIdentificativa}>
+                <div style={{flexdirection: 'row', width:'90%'}} >
+                    <input type="file" className="form-control" id="archivo" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".png , .jpg"/>
+                    <button className="btn btn-secondary mt-2" type="submit" disabled >Inicia sesion para subir foto</button>
+                </div>
+            </form>)
+            }
         </div>
     )
 }

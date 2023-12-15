@@ -1,4 +1,5 @@
 import NavbarPage from "../navbar/navbar.js";
+import Mostrar from "../eventos/mostrarEventos.js"
 
 function paginaInicial() {
     return(
@@ -7,7 +8,7 @@ function paginaInicial() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col">
-                        <h2> Esta es nuestra pagina inicial</h2>
+                        <Mostrar></Mostrar>
                     </div>
                 </div>
             </div>

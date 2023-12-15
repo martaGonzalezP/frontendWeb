@@ -10,7 +10,6 @@ const CompLogin = () => {
     }
 
     useEffect (() => {
-        console.log(process.env.REACT_APP_GOOGLE_CLIENT)
         /* global google */
         google.accounts.id.initialize({
             client_id: "1052996471072-3kmbovt9r51s48npcmqenmt0pd3qu3ip.apps.googleusercontent.com",
@@ -39,7 +38,7 @@ const CompLogin = () => {
                 if (data){
                     data.tokenCompleto= response.credential
                     localStorage.setItem('objetoToken', JSON.stringify(data));
-                    window.location.href="/entidades"
+                    window.location.href="/"
                     //console.log(JSON.parse(localStorage.getItem('objetoToken')))
                 }
                         

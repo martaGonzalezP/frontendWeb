@@ -50,12 +50,14 @@ function cerrarSesion () {
           </Nav.Link>
           <Nav.Link href={`/login`} className='navbar-link' style={{marginLeft: '10vmin'}}> Login
           </Nav.Link> 
+          <Nav.Link href={`/crearEvento`} className='navbar-link' style={{marginLeft: '10vmin'}}> Crear Evento
+          </Nav.Link> 
           <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Entidad
           </Nav.Link> 
-          <Nav.Link href={`/principal`} className='navbar-link' style={{marginLeft: '10vmin'}}> Mapas
+          <Nav.Link href={`/log`} className='navbar-link' style={{marginLeft: '10vmin'}}> Log identificaciones
           </Nav.Link> 
         </Nav>
-        <NavItem>{(nombreUsuario!='')? (nombreUsuario) : "Hola" }</NavItem>
+        <NavItem>{(nombreUsuario!='')? (nombreUsuario) : "Invitado" }</NavItem>
         <Nav>
             <NavDropdown drop='start' className='me-3' title={<img src={foto} style={{ width: '6vh', borderRadius: '50%' }} alt="" />} id="basic-nav-dropdown">
             <NavDropdown.Item href={`/myUserInfo/`}>Ver mi perfil</NavDropdown.Item>

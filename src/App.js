@@ -6,6 +6,8 @@ import PaginaInicial from "./pages/paginaInicial.jsx"
 import PaginaLogin from "./pages/paginaLogin.jsx"
 import PaginaMostrarEntidad from "./pages/paginaMostrarEntidad.jsx"
 import PaginaMapa from "./mapas/Principal.js"
+import CrearEvento from "./eventos/crearEvento.js"
+import InfoEvento from "./eventos/infoEvento.js"
 
 
 
@@ -15,8 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<PaginaInicial/>}/>
           <Route path="/login" element={<PaginaLogin/>}/>
-          <Route path="/entidades" element={<PaginaMostrarEntidad/>}/>
-          <Route path="/principal" element={<PaginaMapa/>}/>
+          <Route path="/crearEvento" element={<CrearEvento/>}/>
+          <Route path="/infoEvento/:idEvento" element={<InfoEvento/>}/>
         </Routes>
       </BrowserRouter>
   );
