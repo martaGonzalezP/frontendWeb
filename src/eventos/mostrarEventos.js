@@ -17,7 +17,7 @@ const CompMostrarEventos = () => {
 
     const getEventos = async () => {
         // Hacer la solicitud para obtener productos desde el backend
-        fetch('http://localhost:3003/eventos/', {
+        fetch('https://backend-web-martas-projects-510c4efc.vercel.app/eventos/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const CompMostrarEventos = () => {
                 "direccion": busqueda.toString()
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3003/eventos/eventosCercanos/', {
+            fetch('https://backend-web-martas-projects-510c4efc.vercel.app/eventos/eventosCercanos/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

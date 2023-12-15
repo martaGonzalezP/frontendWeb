@@ -16,7 +16,7 @@ function NavbarPage(props) {
 }, []);
 
 const comprobarConexion = async () => {
-  fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/entidades/conexion/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {
+  fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/eventos/conexion/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

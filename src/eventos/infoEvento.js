@@ -11,7 +11,7 @@ const CompShowInfoEvento = () => {
     useEffect( () => {getUsuario()}, []);
 
     const getUsuario = async () => {
-        fetch(`http://localhost:3003/eventos/getporid/${idEvento}`, {
+        fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/eventos/getporid/${idEvento}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

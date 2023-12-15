@@ -22,7 +22,7 @@ const CompCrearEvento = () => {
             "organizador": JSON.parse(localStorage.getItem('objetoToken')).correo
           });
 
-        fetch('http://localhost:3003/eventos/', {
+        fetch('https://backend-web-martas-projects-510c4efc.vercel.app/eventos/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const CompCrearEvento = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:3003/eventos/subirFoto', {
+            fetch('https://backend-web-martas-projects-510c4efc.vercel.app/eventos/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -60,7 +60,7 @@ const CompCrearEvento = () => {
                           });
                         console.log("este es el id:", idnuevoEvento)
                         console.log(result.imageUrl)
-                        fetch(`http://localhost:3003/eventos/${idnuevoEvento.replace(/"/g, '')}`, {
+                        fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/eventos/${idnuevoEvento.replace(/"/g, '')}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ const CompLogin = () => {
 
     function handleCallBackResponse (response){
         console.log("Encode JWT: "+  response.credential)
-        fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/entidades/loginToken/${response.credential}`, {
+        fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/eventos/loginToken/${response.credential}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
