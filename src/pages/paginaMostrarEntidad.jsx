@@ -1,5 +1,7 @@
 import NavbarPage from "../navbar/navbar.js";
 import Fotos from "../fotos/fotos.js"
+import ConjFotos from "../fotos/conjFotos.js"
+
 
 function paginaMostrarEntidad() {
     return(
@@ -14,6 +16,8 @@ function paginaMostrarEntidad() {
                 <div className="row">
                     <div className="col">
                         <Fotos></Fotos>
+                        <a>--------------------------------------------------------------------</a>
+                        <ConjFotos></ConjFotos>
                     </div>
                 </div>
             </div>
