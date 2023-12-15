@@ -8,7 +8,7 @@ const CompFotos = () => {
         useEffect( () => {getUsuario()}, []);
 
         const getUsuario = async () => {
-            fetch(`http://localhost:3003/entidades/${idEntidad}`, {
+            fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/entidades/${idEntidad}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const CompFotos = () => {
                 var formdata = new FormData();
                 formdata.append("foto", archivo);
         
-                fetch('http://localhost:3003/entidades/subirFoto', {
+                fetch('https://backend-web-martas-projects-510c4efc.vercel.app/entidades/subirFoto', {
                         method: 'POST',
                         body : formdata
                     }).then(response => response.json())
@@ -43,7 +43,7 @@ const CompFotos = () => {
                                 "foto" : result.imageUrl
                             });
                             console.log(result.imageUrl)
-                            fetch(`http://localhost:3003/entidades/${idEntidad}`, {
+                            fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/entidades/${idEntidad}`, {
                                 method: 'PUT',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const CompFotos = () => {
                             }).then(response => response.text())
                             .then(result => {
                                 console.log(result)
-                                window.location.href = `/entidades/`;
+                                //window.location.href = `/entidades/`;
                             })
                                 .catch(error => {
                                     console.error('Error al subir la imagen:', error);

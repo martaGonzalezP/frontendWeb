@@ -10,6 +10,7 @@ const CompLogin = () => {
     }
 
     useEffect (() => {
+        console.log(process.env.REACT_APP_GOOGLE_CLIENT)
         /* global google */
         google.accounts.id.initialize({
             client_id: "1052996471072-3kmbovt9r51s48npcmqenmt0pd3qu3ip.apps.googleusercontent.com",
@@ -27,7 +28,7 @@ const CompLogin = () => {
 
     function handleCallBackResponse (response){
         console.log("Encode JWT: "+  response.credential)
-        fetch(`http://localhost:3003/entidades/loginToken/${response.credential}`, {
+        fetch(`https://backend-web-martas-projects-510c4efc.vercel.app/entidades/loginToken/${response.credential}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -7,6 +7,8 @@ import PaginaLogin from "./pages/paginaLogin.jsx"
 import PaginaMostrarEntidad from "./pages/paginaMostrarEntidad.jsx"
 import PaginaMapa from "./mapas/Principal.js"
 
+
+
 function App() {
   return (
     <BrowserRouter>

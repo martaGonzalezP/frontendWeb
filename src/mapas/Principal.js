@@ -24,7 +24,7 @@ const CompPrincipal = () => {
             "linea": linea,
             "sentido": sentido,
         })
-        fetch('http://localhost:3003/paradas/linea/', {
+        fetch('https://backend-web-martas-projects-510c4efc.vercel.app/paradas/linea/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const CompPrincipal = () => {
         var raw = JSON.stringify({
             "nombre": nombreParada
         })
-        fetch('http://localhost:3003/paradas/nombre/', {
+        fetch('https://backend-web-martas-projects-510c4efc.vercel.app/paradas/nombre/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const CompPrincipal = () => {
         var raw = JSON.stringify({
             "direccion": direccion
         })
-        fetch('http://localhost:3003/paradas/cercanas/', {
+        fetch('https://backend-web-martas-projects-510c4efc.vercel.app/paradas/cercanas/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const CompPrincipal = () => {
 
     const mostrarMapa = () => {
         if(!ubicacionCargada) {
-            fetch('http://localhost:3003/paradas/ubicacion/', {
+            fetch('https://backend-web-martas-projects-510c4efc.vercel.app/paradas/ubicacion/', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
